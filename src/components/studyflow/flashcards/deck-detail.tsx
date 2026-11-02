@@ -76,7 +76,8 @@ export function DeckDetail({
   onBack: () => void
   onStartReview: (deckId: string) => void
 }) {
-  const { data, addCard, updateCard, deleteCard, resetCardProgress } = useStudyStore()
+  const { data, addCard, updateCard, updateDeck, deleteCard, resetCardProgress } =
+    useStudyStore()
   const [cardFormOpen, setCardFormOpen] = React.useState(false)
   const [editingCard, setEditingCard] = React.useState<Flashcard | null>(null)
   const [editDeckOpen, setEditDeckOpen] = React.useState(false)
