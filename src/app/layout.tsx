@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "students",
   ],
   icons: {
-    icon: "/logo.svg",
+    icon: (process.env.GITHUB_PAGES === "true" ? "/studytodo" : "") + "/logo.svg",
   },
 };
 
