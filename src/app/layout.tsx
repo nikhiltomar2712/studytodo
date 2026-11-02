@@ -26,9 +26,6 @@ export const metadata: Metadata = {
     "productivity",
     "students",
   ],
-  icons: {
-    icon: (process.env.GITHUB_PAGES === "true" ? "/studytodo" : "") + "/logo.svg",
-  },
 };
 
 export const viewport: Viewport = {

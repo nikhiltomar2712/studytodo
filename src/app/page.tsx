@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { GraduationCap } from "lucide-react"
 import {
   StudyStoreProvider,
   useStudyStore,
@@ -20,10 +19,7 @@ function Splash() {
   return (
     <div className="flex min-h-svh items-center justify-center bg-background">
       <div className="flex flex-col items-center gap-3">
-        <span className="flex size-12 animate-pulse items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-          <GraduationCap className="size-6" aria-hidden />
-        </span>
-        <p className="text-sm text-muted-foreground">Loading StudyFlow…</p>
+        <p className="text-sm text-muted-foreground animate-pulse">Loading StudyFlow…</p>
       </div>
     </div>
   )

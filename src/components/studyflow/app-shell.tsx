@@ -46,19 +46,6 @@ export const NAV_ITEMS: {
   { id: "notes", label: "Notes", icon: NotebookPen },
 ]
 
-function BrandMark({ className }: { className?: string }) {
-  return (
-    <div
-      className={cn(
-        "flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm",
-        className
-      )}
-    >
-      <GraduationCap className="size-5" aria-hidden />
-    </div>
-  )
-}
-
 function StreakChip() {
   const { data } = useStudyStore()
   const streak = React.useMemo(() => computeStreak(data.activity), [data.activity])
@@ -199,13 +186,10 @@ export function AppShell({
     <div className="flex min-h-svh w-full">
       {/* Desktop sidebar */}
       <aside className="sticky top-0 hidden h-svh w-60 shrink-0 flex-col border-r bg-sidebar text-sidebar-foreground md:flex">
-        <div className="flex items-center gap-3 px-5 pb-4 pt-6">
-          <BrandMark />
-          <div>
-            <div className="text-base font-bold tracking-tight">StudyFlow</div>
-            <div className="text-[11px] text-muted-foreground">
-              Focus. Learn. Retain.
-            </div>
+        <div className="px-5 pb-4 pt-6">
+          <div className="text-base font-bold tracking-tight">StudyFlow</div>
+          <div className="text-[11px] text-muted-foreground">
+            Focus. Learn. Retain.
           </div>
         </div>
         <nav className="flex-1 space-y-1 px-3 py-2" aria-label="Main navigation">
@@ -238,11 +222,10 @@ export function AppShell({
         <header className="sticky top-0 z-40 flex h-14 items-center justify-between border-b bg-background/85 px-4 backdrop-blur md:hidden">
           <button
             type="button"
-            className="flex items-center gap-2.5"
+            className="flex items-center"
             onClick={() => onNavigate("dashboard")}
             aria-label="StudyFlow home"
           >
-            <BrandMark className="size-8 rounded-lg" />
             <span className="text-base font-bold tracking-tight">
               StudyFlow
             </span>
